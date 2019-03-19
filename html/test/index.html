@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <style>
+        header{
+            width: 100%;
+            height: 50px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top:100px;
+            flex-wrap: nowrap;
+        }
+        header div{
+            color: #ffffff;
+            font-size: 16px;
+            flex-shrink: 1;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div tapmode onclick="openCity()">选择城市</div>
+        <div>主页</div>
+        <div tapmode onclick="openLogin()">登录</div>
+    </header>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vconsole.min.js"></script>
+<script>
+    function openLogin() {
+        api.openWin({
+            name:'login',
+            url: '../login/login.html'
+        })
+    }
+    function openCity() {
+        api.openWin({
+            name:'login',
+            url: '../login/login.html'
+        })
+    }
+</script>
+</html>

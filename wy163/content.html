@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+        html,body{
+            background-color: #FFA500;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body id="body">
+<h1>这是新闻内容页</h1>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/vconsole.min.js"></script>
+<script>
+    var count = 0 ;
+    apiready = function () {
+        api.setRefreshHeaderInfo({
+            bgColor: '#FFFFFF'
+        },function () {
+            count == 0? count = 1:count = 0 ;
+            console.log(count);
+            api.refreshHeaderLoadDone();
+        })
+    }
+</script>
+</body>
+</html>

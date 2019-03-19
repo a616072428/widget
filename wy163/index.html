@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+        body{
+            background: #dddddd;
+        }
+        .header{
+            background: #cccccc;
+            height: 30px;
+            text-align: center;
+        }
+        .nav{
+            background: #ffffff;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="header" class="header">
+    header
+</div>
+<div id="nav" class="nav">
+    nav
+</div>
+<script type="text/javascript" src="../script/api.js"></script>
+<script>
+    apiready = function () {
+        header = $api.byId('header')
+        nav = $api.byId('nav')
+        $api.fixStatusBar(header);
+        openContent();
+    }
+    function openContent() {
+        api.openFrame({
+            name: '测试',
+            url: './content.html',
+            rect: {
+                x: 0,
+                // y: 0,
+                y:$api.offset(header).h+$api.offset(nav).h,
+                w: 'auto',
+                h: 'auto'
+            }
+        })
+    }
+</script>
+</body>
+</html>
